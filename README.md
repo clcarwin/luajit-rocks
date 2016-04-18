@@ -3,6 +3,7 @@
 mkdir build
 cd build
 cmake .. -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX="C:\Program Files\luajit"
+#cmake .. -G "MSYS Makefiles" -DCMAKE_SHARED_LINKER_FLAGS:STRING="-static-libgcc -static" -DCMAKE_EXE_LINKER_FLAGS:STRING="-static-libgcc -static"
 make install
 ```
 
