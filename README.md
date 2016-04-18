@@ -1,5 +1,7 @@
 # Build on MingW
 ```
+mkdir build
+cd build
 cmake .. -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX="C:\Program Files\luajit"
 make install
 ```
