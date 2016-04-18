@@ -85,40 +85,40 @@ elseif proc:match("Power Macintosh") then
    proc = "powerpc"
 end
 
-if system == "FreeBSD" then
-   detected.unix = true
-   detected.freebsd = true
-   detected.bsd = true
-elseif system == "OpenBSD" then
-   detected.unix = true
-   detected.openbsd = true
-   detected.bsd = true
-elseif system == "NetBSD" then
-   detected.unix = true
-   detected.netbsd = true
-   detected.bsd = true
-elseif system == "Darwin" then
-   detected.unix = true
-   detected.macosx = true
-   detected.bsd = true
-elseif system == "Linux" then
-   detected.unix = true
-   detected.linux = true
-elseif system == "SunOS" then
-   detected.unix = true
-   detected.solaris = true
-elseif system and system:match("^CYGWIN") then
-   detected.unix = true
-   detected.cygwin = true
-elseif system and system:match("^Windows") then
-   detected.windows = true
-elseif system and system:match("^MINGW") then
+-- if system == "FreeBSD" then
+--    detected.unix = true
+--    detected.freebsd = true
+--    detected.bsd = true
+-- elseif system == "OpenBSD" then
+--    detected.unix = true
+--    detected.openbsd = true
+--    detected.bsd = true
+-- elseif system == "NetBSD" then
+--    detected.unix = true
+--    detected.netbsd = true
+--    detected.bsd = true
+-- elseif system == "Darwin" then
+--    detected.unix = true
+--    detected.macosx = true
+--    detected.bsd = true
+-- elseif system == "Linux" then
+--    detected.unix = true
+--    detected.linux = true
+-- elseif system == "SunOS" then
+--    detected.unix = true
+--    detected.solaris = true
+-- elseif system and system:match("^CYGWIN") then
+--    detected.unix = true
+--    detected.cygwin = true
+-- elseif system and system:match("^Windows") then
+--    detected.windows = true
+-- elseif system and system:match("^MINGW") then
    detected.windows = true
    detected.mingw32 = true
-else
-   detected.unix = true
-   -- Fall back to Unix in unknown systems.
-end
+-- else
+--    detected.unix = true
+--    -- Fall back to Unix in unknown systems.
+-- end
 
 -- Path configuration:
 
@@ -355,11 +355,11 @@ end
 if detected.mingw32 then
    defaults.platforms = { "win32", "mingw32", "windows" }
    defaults.obj_extension = "o"
-   defaults.cmake_generator = "MinGW Makefiles"
-   defaults.variables.MAKE = "mingw32-make"
-   defaults.variables.CC = "mingw32-gcc"
+   defaults.cmake_generator = "MSYS Makefiles"
+   defaults.variables.MAKE = "make"
+   defaults.variables.CC = "gcc"
    defaults.variables.RC = "windres"
-   defaults.variables.LD = "mingw32-gcc"
+   defaults.variables.LD = "gcc"
    defaults.variables.CFLAGS = "-O2"
    defaults.variables.LIBFLAG = "-shared"
    defaults.external_deps_patterns = {
