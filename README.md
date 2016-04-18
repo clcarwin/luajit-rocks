@@ -1,3 +1,10 @@
+# Build on MingW
+```
+cmake .. -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX="C:\Program Files\luajit"
+make install
+```
+
+
 CMake-based LuaJIT + Luarocks
 =============================
 
