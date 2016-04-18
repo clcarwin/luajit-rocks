@@ -481,7 +481,7 @@ end
 defaults.variables.LIB_EXTENSION = defaults.lib_extension
 defaults.variables.OBJ_EXTENSION = defaults.obj_extension
 defaults.variables.LUAROCKS_PREFIX = site_config.LUAROCKS_PREFIX
-defaults.variables.LUA = site_config.LUA_DIR_SET and (defaults.variables.LUA_BINDIR.."/"..defaults.lua_interpreter) or defaults.lua_interpreter
+defaults.variables.LUA = site_config.LUA_DIR_SET and ('"'..defaults.variables.LUA_BINDIR.."/"..defaults.lua_interpreter..'"') or defaults.lua_interpreter
 
 -- Add built-in modules to rocks_provided
 defaults.rocks_provided["lua"] = cfg.lua_version.."-1"
