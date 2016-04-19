@@ -18,5 +18,5 @@ rocks_servers = {
 }
 
 variables = {
-  LUALIB = [[libluajit.lib]]
+  LUALIB = [[libluajit.dll.a]]
 }
