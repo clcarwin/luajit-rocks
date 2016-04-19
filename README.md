@@ -2,8 +2,9 @@
 ```
 mkdir build
 cd build
-cmake .. -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX="C:\Program Files\luajit"
-#cmake .. -G "MSYS Makefiles" -DCMAKE_SHARED_LINKER_FLAGS:STRING="-static-libgcc" -DCMAKE_EXE_LINKER_FLAGS:STRING="-static-libgcc" -DCMAKE_INSTALL_PREFIX="c:/luainstall"
+
+# replace mingw libgcc_s.a to static version
+cmake .. -G "MSYS Makefiles" -DCMAKE_INSTALL_PREFIX="c:/luainstall"
 make install
 ```
 
